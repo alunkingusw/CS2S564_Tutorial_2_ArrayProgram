@@ -53,6 +53,7 @@
             btnAdd.TabIndex = 1;
             btnAdd.Text = "Add to Array";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // lblArraySize
             // 
@@ -108,6 +109,7 @@
             Controls.Add(txtNewElement);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
