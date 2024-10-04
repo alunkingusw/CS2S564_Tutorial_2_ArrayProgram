@@ -85,6 +85,7 @@
             btnSort.TabIndex = 4;
             btnSort.Text = "Sort Array";
             btnSort.UseVisualStyleBackColor = true;
+            btnSort.Click += btnSort_Click;
             // 
             // btnDisplay
             // 
@@ -95,6 +96,7 @@
             btnDisplay.TabIndex = 5;
             btnDisplay.Text = "Display Contents";
             btnDisplay.UseVisualStyleBackColor = true;
+            btnDisplay.Click += btnDisplay_Click;
             // 
             // Form1
             // 

@@ -16,18 +16,18 @@ namespace ArrayProgramTutorial2
         {
 
         }
-        
+
         /**
          * Checks if the textbox has a number and if so, adds
          * it to the array
          */
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if(txtNewElement.Text != "")
+            if (txtNewElement.Text != "")
             {
                 int parsedInteger;
                 bool success = int.TryParse(txtNewElement.Text, out parsedInteger);
-                if(!success)
+                if (!success)
                 {
                     MessageBox.Show("Please only enter integers.");
                 }
@@ -42,11 +42,12 @@ namespace ArrayProgramTutorial2
                     txtNewElement.Text = "";
 
                     //disable add button when array is full
-                    if(index >= intArray.Length)
+                    if (index >= intArray.Length)
                     {
                         btnAdd.Enabled = false;
-                    }else if(index > 1)
-                        //enable sort button when two elements are added.
+                    }
+                    else if (index > 1)
+                    //enable sort button when two elements are added.
                     {
                         btnSort.Enabled = true;
                     }
@@ -56,6 +57,16 @@ namespace ArrayProgramTutorial2
             {
                 MessageBox.Show("You can't add nothing to an array!");
             }
+        }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            Array.Sort(intArray);
+        }
+
+        private void btnDisplay_Click(object sender, EventArgs e)
+        {
+            //display the contents as a messagebox
         }
     }
 }
