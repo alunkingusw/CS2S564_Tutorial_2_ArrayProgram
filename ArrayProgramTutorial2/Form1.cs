@@ -61,12 +61,19 @@ namespace ArrayProgramTutorial2
 
         private void btnSort_Click(object sender, EventArgs e)
         {
-            Array.Sort(intArray);
+            Array.Sort(intArray, 0, index);
         }
 
         private void btnDisplay_Click(object sender, EventArgs e)
         {
+            string message="";
             //display the contents as a messagebox
+            if(index == 0)
+            {
+                message = "The array presently contains no entries.";
+            }
+
+            MessageBox.Show(message);
         }
     }
 }
